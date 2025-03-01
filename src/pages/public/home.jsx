@@ -7,10 +7,12 @@ const home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="w-auto z mx-auto min-h-screen bg-cover bg-center bg-no-repeat"
+    <div className="w-auto z mx-auto pt-28 min-h-screen bg-cover bg-center bg-no-repeat"
     style={{ backgroundImage: "url('./assets/06-AfternoonMealOfTheWorker 1.png')" }}>
-
-        <h1>HOME</h1>
+      <div>
+      <h1>HOME</h1>
+      </div>
+        
     </div>
   );
 };
