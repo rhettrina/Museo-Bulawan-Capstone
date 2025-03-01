@@ -7,9 +7,14 @@ const about = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className='max-w-7xl mx-auto'>
-        <h1>ABOUT</h1>
-    </div>
+    <>
+      <div className="w-auto z mx-auto pt-36 min-h-screen bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('./assets/06-AfternoonMealOfTheWorker 1.png')" }}>
+        <div className='mx-5 w-auto'>
+          <h1>ABOUT</h1>
+      </div>
+      </div>
+    </>
   );
 };
 

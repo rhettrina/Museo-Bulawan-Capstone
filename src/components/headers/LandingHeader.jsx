@@ -7,7 +7,17 @@ const LandingHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
+    
     <header className="bg-transparent shadow-sm fixed z-50">
+      <div className='flex w-auto h-7 bg-[#1C1B19] justify-between px-5'>
+        <span className=' text-white text-xs h-fit w-fit my-auto'>Open Daily 9:00am-5:00pm, Monday- Friday, Close During Holidays</span>
+        <NavLink to="/login" className='mx-2'>
+        <span className='text-white text-xs my-auto cursor-pointer'>
+          Login
+        </span>
+        </NavLink>
+      </div>
+
       <nav className=" w-[100vw] bg-transparent">
         <div className='flex mx-20 h-28 bg-transparent  border-b-2 border-white justify-between'>
           <div className='flex'> 
@@ -18,8 +28,7 @@ const LandingHeader = () => {
             </div>
 
             <Link to="/" className='my-auto leading-6 text-3xl font-bold ml-2 text-white'> 
-                <h1>Museo </h1>
-                <h1>Bulawan</h1>
+                <span>Museo <br />Bulawan</span>
             </Link>
           </div>
 
