@@ -4,29 +4,21 @@ import { useAuth } from '../../context/AuthContext';
 
 const LandingHeader = () => {
   const { isAuthenticated } = useAuth();
-  const [isScrolled, setIsScrolled] = useState(false); // State to track if the user has scrolled
+  const [isScrolled, setIsScrolled] = useState(false); // State to track if the user has scrolled down
   const [isTextVisible, setIsTextVisible] = useState(true); // State to track visibility of the text
-  const [lastScrollY, setLastScrollY] = useState(0); // State to track the last scroll position
 
   // Function to handle scroll behavior
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
 
-    // Change background color and shadow based on scroll position
+    // Check if the user is at the top of the page
     if (currentScrollY > 50) {
       setIsScrolled(true); // Add shadow and change background
-    } else {
-      setIsScrolled(false); // Remove shadow and reset background
-    }
-
-    // Hide text when scrolling down, show when scrolling up
-    if (currentScrollY > lastScrollY && currentScrollY > 50) {
       setIsTextVisible(true); // Hide text
     } else {
+      setIsScrolled(false); // Remove shadow and reset background
       setIsTextVisible(false); // Show text
     }
-
-    setLastScrollY(currentScrollY);
   };
 
   useEffect(() => {
@@ -37,11 +29,11 @@ const LandingHeader = () => {
       // Cleanup scroll event listener on component unmount
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [lastScrollY]);
+  }, []);
 
   return (
     <header
-      className={`w-full fixed z-50 transition-all duration-300 ${isScrolled ? 'bg-[#1C1B19] shadow-sm' : 'bg-transparent shadow-none'
+      className={`w-full fixed z-50 transition-all duration-300 ${isScrolled ? 'bg-[#1C1B19] shadow-lg' : 'bg-transparent shadow-none'
         }`}
     >
       <div className="flex w-auto h-7 justify-between px-5">
