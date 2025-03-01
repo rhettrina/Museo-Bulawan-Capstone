@@ -7,7 +7,7 @@ const about = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div>
+    <div className='max-w-7xl mx-auto'>
         <h1>ABOUT</h1>
     </div>
   );
