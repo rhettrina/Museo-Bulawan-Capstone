@@ -12,18 +12,18 @@ const LandingHeader = () => {
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
 
-    // Change background color based on scroll position
+    // Change background color and shadow based on scroll position
     if (currentScrollY > 50) {
-      setIsScrolled(true);
+      setIsScrolled(true); // Add shadow and change background
     } else {
-      setIsScrolled(false);
+      setIsScrolled(false); // Remove shadow and reset background
     }
 
     // Hide text when scrolling down, show when scrolling up
     if (currentScrollY > lastScrollY && currentScrollY > 50) {
-      setIsTextVisible(false);
+      setIsTextVisible(true); // Hide text
     } else {
-      setIsTextVisible(true);
+      setIsTextVisible(false); // Show text
     }
 
     setLastScrollY(currentScrollY);
@@ -41,7 +41,7 @@ const LandingHeader = () => {
 
   return (
     <header
-      className={`w-full shadow-sm fixed z-50 transition-colors duration-300 ${isScrolled ? 'bg-[#1C1B19]' : 'bg-transparent'
+      className={`w-full fixed z-50 transition-all duration-300 ${isScrolled ? 'bg-[#1C1B19] shadow-sm' : 'bg-transparent shadow-none'
         }`}
     >
       <div className="flex w-auto h-7 justify-between px-5">
