@@ -40,8 +40,20 @@ const home = () => {
 
         </div>
       </nav>
-        <div className='mx-5 w-auto'>
-        <h1>HOME</h1>
+      <div className='mx-5 w-auto flex '>
+          <div className='w-16 h-auto'>
+s
+          </div>
+        
+          <div className="w-full h-fit ">
+        <h2 className="text-[4em] font-bold text-[#DAB765] leading-[200%] drop-shadow-[3px_3px_0px_black] ">
+          WELCOME TO
+          </h2>
+
+        </div>
+        <div className='w-16 h-auto'>
+s
+          </div>
         </div>
           
       </div>
