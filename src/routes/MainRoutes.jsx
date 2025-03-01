@@ -6,6 +6,7 @@ import ProtectedRoute from '../auth/ProtectedRoute';
 import Home from '../pages/public/home';
 import About from '../pages/public/about';
 import Login from '../pages/public/login';
+import NewsAndEvents from '../pages/public/newsandevents';
 import AdminRoutes from './AdminRoutes';
 
 const router = createBrowserRouter([
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     children: [
       { path: '/', element: <Home /> },
       { path: '/about', element: <About /> },
+      { path: '/news&events', element: <NewsAndEvents /> },
       { path: '/login', element: <Login /> },
       {
         path: '/admin',

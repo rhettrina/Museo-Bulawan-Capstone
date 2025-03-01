@@ -8,7 +8,7 @@ const AdminLayout = () => (
     <main>
       <Outlet />
     </main>
-    <AdminFooter />
+    
   </>
 );
 
